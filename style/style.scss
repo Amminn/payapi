@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// ------ Design System ------
+
+// Colors
+
+$primary-Dark-Pink: #BA4270;
+$primary-Water-White: #FBFCFE;
+$primary-background-color: #EDF3F8;
+
+$secondary-Dark-Blue: #36536B;
+$secondary-San-Juan-Blue: #36536B;
+$secondary-Mirage-Blue: #1B262F;
+$secondary-Charm-Pink: #DA6D97;
+$secondary-Light-San-Juan-Blue: #6C8294;
+
+
+html {
+    font-size: 10px; // 1rem = 10px
+    font-family: 'Public Sans', sans-serif;
+}
+
+body {
+    background-color: $primary-background-color;
+}
+
+// Font small screen 
+
+h1, h2, h3, h4 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+}
+
+h3.small {
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+}
+
+p.body {
+    font-size: 1.5rem;
+}
+
+p.code {
+    font-family: 'Roboto Mono', monospace;
+}
+
+
