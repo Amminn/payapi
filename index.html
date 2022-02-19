@@ -1,62 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
     <title>PayApi</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="section">
-        <div class="container">
-            <nav class="nav">
-                <a href="#home">
-                    <img src="./images/Logo/blueLogo.png" alt="PayApi Logo" class="logo">
-                </a>
-                <ul class="menu">
-                    <li class="nav--item"><a href="#pricing" class="nav--link">Pricing</a></li>
-                    <li class="nav--item"><a href="#about" class="nav--link">About</a></li>
-                    <li class="nav--item"><a href="#contact" class="nav--link">Contact</a></li>
-                    <a href="#" class="nav--button">Schedule a Demo</a>
-                </ul>
-                <div class="toggle">
-                    <i class='bx bx-menu'></i>
-                    <i class='bx bx-x hidden'></i>
-                </div>
-            </nav>
-            <img class="phone-image" src="./images/phones/phone-header.png" alt="Phone MockUp Notification">
-            <div class="header__bottom">
-                <h2 class="header__bottom-title h2-small">Start building with our APIs for absolutely free.</h2>
-                <form class="header__bottom-form" action="" method="post">
-                    <input type="email" placeholder="Enter email address">
-                    <button>Schedule a Demo</button>
-                </form>
-                <p class="header__bottom-question">Have any questions? <a href="#" class="bold">Contact Us</a></p>
-            </div>
+      <div class="container">
+        <nav class="nav">
+          <a href="#home">
+            <img
+              src="./images/Logo/blueLogo.png"
+              alt="PayApi Logo"
+              class="logo"
+            />
+          </a>
+          <ul class="menu">
+            <li class="nav--item">
+              <a href="#pricing" class="nav--link">Pricing</a>
+            </li>
+            <li class="nav--item">
+              <a href="#about" class="nav--link">About</a>
+            </li>
+            <li class="nav--item">
+              <a href="#contact" class="nav--link">Contact</a>
+            </li>
+            <a href="#" class="nav--button">Schedule a Demo</a>
+          </ul>
+          <div class="toggle">
+            <i class="bx bx-menu"></i>
+            <i class="bx bx-x hidden"></i>
+          </div>
+        </nav>
+        <img
+          class="phone-image"
+          src="./images/phones/phone-header.png"
+          alt="Phone MockUp Notification"
+        />
+        <div class="header__bottom">
+          <h2 class="header__bottom-title h2-small">
+            Start building with our APIs for absolutely free.
+          </h2>
+          <form class="header__bottom-form" action="" method="post">
+            <input type="email" placeholder="Enter email address" />
+            <button>Schedule a Demo</button>
+          </form>
+          <p class="header__bottom-question">
+            Have any questions? <a href="#" class="bold">Contact Us</a>
+          </p>
         </div>
+      </div>
     </header>
 
     <!-- ------------------------------- -->
 
     <section class="about section">
-        <div class="container">
-            <div class="company-logos">
-                <img src="./images/companiesSVG/tesla.svg" alt="tesla logo">
-                <img src="./images/companiesSVG/microsoft.svg" alt="microsoft logo">
-                <img src="./images/companiesSVG/hp.svg" alt="hp logo">
-                <img src="./images/companiesSVG/orcale.svg" alt="orcale logo">
-                <img src="./images/companiesSVG/Google.svg" alt="google logo">
-                <img src="./images/companiesSVG/nvidia.svg" alt="nvidia logo">
+      <div class="container">
+        <div class="company-logos">
+          <img src="./images/companiesSVG/tesla.svg" alt="tesla logo" />
+          <img src="./images/companiesSVG/microsoft.svg" alt="microsoft logo" />
+          <img src="./images/companiesSVG/hp.svg" alt="hp logo" />
+          <img src="./images/companiesSVG/orcale.svg" alt="orcale logo" />
+          <img src="./images/companiesSVG/Google.svg" alt="google logo" />
+          <img src="./images/companiesSVG/nvidia.svg" alt="nvidia logo" />
+        </div>
+        <div class="about__text">
+          <h2 class="about__text-title h2-small">Who we work with</h2>
+          <p class="about__text-paragraph second-paragraph">
+            Today, millions of people around the world have successfully
+            connected their accounts to apps they love using our API. We provide
+            developers with the tools they need to create easy and accessible
+            experiences for their users.
+          </p>
+          <a href="#" class="dark-button-style">About Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------- -->
+
+    <section class="easy-code section section-margin">
+      <div class="container">
+        <div class="wrapper">
+          <div class="coding">
+            <div class="nav">
+              <div class="buttons">
+                <div class="red"></div>
+                <div class="light-blue"></div>
+                <div class="dark-blue"></div>
+              </div>
             </div>
-            <div class="about__text">
-                <h2 class="about__text-title h2-small">Who we work with</h2>
-                <p class="about__text-paragraph">Today, millions of people around the world have successfully connected their accounts to apps they love using our API. We provide developers with the tools they need to create easy and accessible experiences for their users. </p>
-                <a href="#" class="dark-button-style">About Us</a>
+            <div class="code-area">
+                <pre>
+                    <code>
+&ltform id="form-id" method="GET"> &lt/form&gt
+    &ltscript
+        src="https://loremipsum.com/api.js"
+        data-client-name="Your Company's Name"
+        data-form-id="form-id"
+        data-key="test_key"
+        data-product="transactions"
+        data-env="sandbox"&gt
+&lt/script&gt
+                    </code>
+                </pre>
+            </div>
+          </div>
+
+          <div class="easy-code__bottom">
+            <h2 class="easy-code__bottom-title h2-small">Easy to implement</h2>
+            <p class="easy-code__bottom-paragraph second-paragraph">
+                Our API comes with just a few lines of code. You’ll be up and running in no time. We built our documentation page to integrate payments functionality with ease.
+              </p>
+    
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------ -->
+
+    <section class="section section-margin ui-ux">
+        <div class="container">
+            <div class="ui-ux__images-side">
+                <img src="./images/phones/twoPhones.png" alt="phones mockup" srcset="">
+                <img src="./images/phones/twoPhones2.png" alt="phones mockup" srcset="">
+            </div>
+            <div class="ui-ux__text">
+                <h2 class="ui-ux__text-title h2-small">Simple UI & UX</h2>
+                <p class="ui-ux__text-paragraph second-paragraph">
+                    Our pre-built form is easy to integrate in your app or website’s checkout flow and designed to optimize conversion. 
+                  </p>
             </div>
         </div>
     </section>
 
-</body>
+    <!-- ------------------- -->
+
+    <section class="section section-margin cards">
+        <div class="container">
+            <div class="cards__wrapper">
+                <div class="card">
+                    <div class="img">
+                        <img src="./images/icons/Personal-Finances.png" alt="Personal Finances">
+                    </div>
+                    <h3 class="small">Personal Finances</h3>
+                    <p class="second-paragraph">Consolidate financial data from multiple sources and categorize transactions up to 2 years of history. Analyze reports to reconcile activities in your account. </p>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="./images/icons/Banking-&-Coverage.png" alt="">
+                    </div>
+                    <h3 class="small">Banking & Coverage</h3>
+                    <p class="second-paragraph">With our platform, you can speed up account onboarding and support ongoing payments for checking, savings, credit card, and brokerage accounts.</p>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="./images/icons/Consumer-Payments.png" alt="">
+                    </div>
+                    <h3 class="small">Consumer Payments</h3>
+                    <p class="second-paragraph">It’s easier to set up secure bank payments with us through a flow designed with the user experience in mind. Customers could instantly authenticate their account.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ----------- -->
+
+    <section class="section section-margin read-email">
+        <div class="container">
+            <div class="header__bottom">
+                <h2 class="header__bottom-title h2-small">
+                    Ready to start?
+                </h2>
+                <form class="header__bottom-form" action="" method="post">
+                  <input type="email" placeholder="Enter email address" />
+                  <button>Schedule a Demo</button>
+                </form>
+        </div>
+    </section>
+
+
+    <!-- -------footer------- -->
+
+    <footer class="section footer">
+        <div class="container">
+            <nav class="nav">
+                <a href="#home">
+                  <img
+                    src="./images/Logo/blueLogo.png"
+                    alt="PayApi Logo"
+                    class="logo"
+                  />
+                </a>
+                <ul class="menu">
+                  <li class="nav--item">
+                    <a href="#pricing" class="nav--link">Pricing</a>
+                  </li>
+                  <li class="nav--item">
+                    <a href="#about" class="nav--link">About</a>
+                  </li>
+                  <li class="nav--item">
+                    <a href="#contact" class="nav--link">Contact</a>
+                  </li>
+                  <a href="#" class="nav--button">Schedule a Demo</a>
+                </ul>
+                <div class="toggle">
+                  <i class="bx bx-menu"></i>
+                  <i class="bx bx-x hidden"></i>
+                </div>
+              </nav>
+            <div class="social-icons">
+                <i class='bx bxl-facebook-square'></i>
+                <i class='bx bxl-twitter'></i>
+                <i class='bx bxl-linkedin-square' ></i>
+            </div>
+        </div>
+    </footer>
+  </body>
 </html>
