@@ -30,7 +30,7 @@ html {
 
 body {
     background-color: $primary-background-color;
-    max-width: 100%;
+    // max-width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -53,6 +53,7 @@ ul {
 h1, h2, h3, h4 {
     font-family: 'DM Serif Display', serif;
     font-weight: 400;
+    color: $secondary-San-Juan-Blue;
 }
 
 h3.small {
@@ -72,23 +73,46 @@ p.code {
     display: none;
 }
 
+.section {
+    padding-block: 4rem;
+}
+
+.dark-button-style {
+    display: block;
+    width: 130px;
+    font-size: 1.5rem;
+    color: $primary-Water-White;
+    background-color: transparent;
+    letter-spacing: -0.12px;
+    border: 1px solid $primary-Water-White;
+    border-radius: 24px;
+    padding: 1.6rem 3.2rem 1.4rem;
+    transition: 0.3s ease;
+
+    &:hover {
+        background-color: $primary-Water-White;
+        color: $secondary-San-Juan-Blue;
+        border-color: transparent;
+    }
+}
+
 // header 
 
 header {
     position: relative;
     width: 100%;
     height: 130vh;
-    padding-top: 4rem;
+
     &::before {
         content: '';
         position: absolute;
         height: 100%;
         width: 100%;
         // max-width: 100%;
-        top: -44%;
+        top: -65%;
         left: 0%;
         background: url('../images/background-elements/full.png') no-repeat center/cover;
-        z-index: 100; 
+        z-index: -1; 
     }
 }
 
@@ -109,11 +133,13 @@ header .nav {
 }
 
 header .nav .menu {
+    position: fixed;
     height: 100vh;
     width: 80%;
     background-color: $secondary-Mirage-Blue;
-    position: absolute;
     right: -100%;
+    top: 0;
+    transition: 0.3s ease;
 }
 
 header .toggle {
@@ -123,7 +149,126 @@ header .toggle {
     justify-content: center;
     align-items: center;
     color: $secondary-Dark-Blue;
-    z-index: 1000;
+    // z-index: 1000;
 }
 
+header .phone-image {
+    // height: 250px;
+    width: 150px;
+    margin: 3.2rem auto 4.8rem;
+    border-radius: 20px; 
+    box-shadow: 20px 20px 80px rgba(54, 83, 107, 0.300727);
+}
+
+.h2-small {
+    text-align: center;
+    font-size: 3.2rem;
+    line-height: 36px;
+    letter-spacing: -0.25px;
+}
+
+.header__bottom {
+    form input {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: $secondary-San-Juan-Blue;
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: $primary-Water-White;
+        margin-top: 2.4rem;
+        margin-bottom: 1.6rem;
+        padding: 1.6rem 2.4rem 1.4rem;
+        border-radius: 24px;
+
+        &::placeholder {
+            color: inherit;
+            font-weight: bold;
+        }
+    }
+    button {
+        width: 100%;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+        padding: 1.6rem 2.4rem 1.4rem;
+        text-align: center;
+        border: none;
+        outline: none;
+        border-radius: 24px;
+        background-color: $primary-Dark-Pink;
+        margin-bottom: 2.4rem;
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        &:hover {
+            background-color: $secondary-Charm-Pink;
+        }
+    }
+
+    .header__bottom-question {
+        text-align: center;
+        font-size: 1.5rem;
+        color: $secondary-San-Juan-Blue;
+
+        a {
+            font-weight: bold;
+            color: inherit;
+        }
+    }
+}
+
+// About
+
+.about {
+    position: relative;
+    background-color: $secondary-Mirage-Blue;
+    padding-block: 8rem;
+    overflow: hidden;
+    height: 100%;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: url('../images/background-elements/full.png') no-repeat;
+        background-position: 50% 159%;        
+        height: 60%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .company-logos {
+        height: 154px;
+        display: flex;
+        justify-content: space-evenly;
+        align-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 5.6rem;
+
+        img {
+            transform: scale(0.85);
+        }
+    }
+
+    .about__text {
+        color: $primary-Water-White;
+
+        .about__text-title {
+            color: inherit;
+            margin-bottom: 1.6rem;
+        }
+        .about__text-paragraph {
+            font-size: 1.5rem;
+            font-weight: 300;
+            text-align: center;
+            line-height: 28px;
+            margin-bottom: 6rem;
+        }
+        .dark-button-style {
+            margin-inline: auto;
+        }
+    }
+}
 

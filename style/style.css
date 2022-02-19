@@ -15,7 +15,6 @@ html {
 
 body {
   background-color: #EDF3F8;
-  max-width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -36,6 +35,7 @@ ul {
 h1, h2, h3, h4 {
   font-family: 'DM Serif Display', serif;
   font-weight: 400;
+  color: #36536B;
 }
 
 h3.small {
@@ -55,11 +55,34 @@ p.code {
   display: none;
 }
 
+.section {
+  padding-block: 4rem;
+}
+
+.dark-button-style {
+  display: block;
+  width: 130px;
+  font-size: 1.5rem;
+  color: #FBFCFE;
+  background-color: transparent;
+  letter-spacing: -0.12px;
+  border: 1px solid #FBFCFE;
+  border-radius: 24px;
+  padding: 1.6rem 3.2rem 1.4rem;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.dark-button-style:hover {
+  background-color: #FBFCFE;
+  color: #36536B;
+  border-color: transparent;
+}
+
 header {
   position: relative;
   width: 100%;
   height: 130vh;
-  padding-top: 4rem;
 }
 
 header::before {
@@ -67,10 +90,10 @@ header::before {
   position: absolute;
   height: 100%;
   width: 100%;
-  top: -44%;
+  top: -65%;
   left: 0%;
   background: url("../images/background-elements/full.png") no-repeat center/cover;
-  z-index: 100;
+  z-index: -1;
 }
 
 .container {
@@ -95,11 +118,14 @@ header .nav {
 }
 
 header .nav .menu {
+  position: fixed;
   height: 100vh;
   width: 80%;
   background-color: #1B262F;
-  position: absolute;
   right: -100%;
+  top: 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 header .toggle {
@@ -115,6 +141,147 @@ header .toggle {
       -ms-flex-align: center;
           align-items: center;
   color: #36536B;
+}
+
+header .phone-image {
+  width: 150px;
+  margin: 3.2rem auto 4.8rem;
+  border-radius: 20px;
+  -webkit-box-shadow: 20px 20px 80px rgba(54, 83, 107, 0.300727);
+          box-shadow: 20px 20px 80px rgba(54, 83, 107, 0.300727);
+}
+
+.h2-small {
+  text-align: center;
+  font-size: 3.2rem;
+  line-height: 36px;
+  letter-spacing: -0.25px;
+}
+
+.header__bottom form input {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #36536B;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #FBFCFE;
+  margin-top: 2.4rem;
+  margin-bottom: 1.6rem;
+  padding: 1.6rem 2.4rem 1.4rem;
+  border-radius: 24px;
+}
+
+.header__bottom form input::-webkit-input-placeholder {
+  color: inherit;
+  font-weight: bold;
+}
+
+.header__bottom form input:-ms-input-placeholder {
+  color: inherit;
+  font-weight: bold;
+}
+
+.header__bottom form input::-ms-input-placeholder {
+  color: inherit;
+  font-weight: bold;
+}
+
+.header__bottom form input::placeholder {
+  color: inherit;
+  font-weight: bold;
+}
+
+.header__bottom button {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  padding: 1.6rem 2.4rem 1.4rem;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 24px;
+  background-color: #BA4270;
+  margin-bottom: 2.4rem;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.header__bottom button:hover {
+  background-color: #DA6D97;
+}
+
+.header__bottom .header__bottom-question {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #36536B;
+}
+
+.header__bottom .header__bottom-question a {
+  font-weight: bold;
+  color: inherit;
+}
+
+.about {
+  position: relative;
+  background-color: #1B262F;
+  padding-block: 8rem;
+  overflow: hidden;
+  height: 100%;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  background: url("../images/background-elements/full.png") no-repeat;
+  background-position: 50% 159%;
+  height: 60%;
+  width: 100%;
+  top: 0;
+  left: 0;
   z-index: 1000;
+}
+
+.about .company-logos {
+  height: 154px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 5.6rem;
+}
+
+.about .company-logos img {
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+}
+
+.about .about__text {
+  color: #FBFCFE;
+}
+
+.about .about__text .about__text-title {
+  color: inherit;
+  margin-bottom: 1.6rem;
+}
+
+.about .about__text .about__text-paragraph {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 28px;
+  margin-bottom: 6rem;
+}
+
+.about .about__text .dark-button-style {
+  margin-inline: auto;
 }
 /*# sourceMappingURL=style.css.map */
