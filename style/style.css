@@ -455,5 +455,56 @@ header .phone-image {
   margin-top: 4rem;
   background-color: #1B262F;
   position: relative;
+  z-index: 0;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  background: url("../images/background-elements/full.png") no-repeat;
+  background-position: 50% -50%;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.footer .logo {
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+.footer nav {
+  margin-bottom: 4rem;
+}
+
+.footer li {
+  text-align: center;
+}
+
+.footer li a {
+  display: inline-block;
+  color: #FBFCFE;
+  opacity: 0.7;
+  font-size: 1.8rem;
+  line-height: 18px;
+  padding: 2rem 0;
+}
+
+.footer .social-icons {
+  margin-inline: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 140px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .social-icons i {
+  font-size: 2.4rem;
+  color: #FBFCFE;
 }
 /*# sourceMappingURL=style.css.map */
