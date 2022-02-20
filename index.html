@@ -12,7 +12,7 @@
     <title>PayApi</title>
   </head>
   <body>
-    <header class="section">
+    <header class="section" id="header">
       <div class="container">
         <nav class="nav">
           <a href="#home">
@@ -23,6 +23,8 @@
             />
           </a>
           <ul class="menu">
+            <i class="bx bx-x" id="menu-close"></i>
+            <div class="divider"></div>
             <li class="nav--item">
               <a href="#pricing" class="nav--link">Pricing</a>
             </li>
@@ -35,8 +37,8 @@
             <a href="#" class="nav--button">Schedule a Demo</a>
           </ul>
           <div class="toggle">
-            <i class="bx bx-menu"></i>
-            <i class="bx bx-x hidden"></i>
+            <i class="bx bx-menu" id="menu-open"></i>
+            <!-- <i class="bx bx-x hidden"></i> -->
           </div>
         </nav>
         <img
@@ -186,7 +188,6 @@
         </div>
     </section>
 
-
     <!-- -------footer------- -->
 
     <footer class="section footer">
@@ -225,6 +226,6 @@
         </div>
     </footer>
 
-    <script src="./javaScript.js"></script>
+    <script src="js.js"></script>
   </body>
 </html>
