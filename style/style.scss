@@ -16,10 +16,8 @@
 // -------header section-------
 
 .header {
-    cursor: pointer;
     position: relative;
     width: 100%;
-    // height: 10vh; 
     overflow: hidden;
     margin-bottom: 4rem;
 
@@ -31,8 +29,16 @@
         top: 0%;
         left: 0%;
         background: url('../images/background-elements/full.png') no-repeat center/cover;
-        background-position: 50% -517px;
+        background-position: 50% -525px;
+        background-size: 780px; /* giving fixed size to the circel keep it on its position perfectly */
         z-index: -1; 
+
+        @include breakpoint(tablet) {
+            & {
+                background-position: 50% -700px;
+                background-size: 949px;
+            }
+        }
     }
 }
 
@@ -107,6 +113,7 @@
                     opacity: 1;
                 }
             }
+
             .nav--button {
                 width: 100%;
                 font-size: 1.5rem;
@@ -128,28 +135,47 @@
                 }
             }
         }
+        
+        .toggle {
+            cursor: pointer !important; 
+            font-size: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $secondary-San-Juan-Blue;
+        }
     }
     @include breakpoint(tablet) {
         .hidden {
             display: none;
         }
+
         &__nav-menu {
-            position: static;
-            height: 100%;
+            position: initial;
+            height: 4rem;
+            width: initial;
             background-color: transparent;
-            color: $secondary-San-Juan-Blue;
+            padding: 0;
+            margin: 0;
+            
+            /* adding the style of the menu */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            & a {
+                margin: 0 1rem;
+                color: $secondary-San-Juan-Blue;
+                font-size: 1.5rem;
+                font-weight: bold;
+                padding: 0 1rem;                
+            }
+
+            & .nav--button {
+                margin: 0 0 0 4rem;
+            }
         }
     }
-}
-
-
-.header .toggle {
-    cursor: pointer !important; 
-    font-size: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $secondary-San-Juan-Blue;
 }
 
 header .phone-image {
@@ -165,9 +191,22 @@ header .phone-image {
     font-size: 3.5rem;
     line-height: 36px;
     letter-spacing: -0.25px;
+
+    @include breakpoint(tablet) {
+        & {
+            font-size: 4.8rem;
+            line-height: 56px;
+            letter-spacing: -0.369231px;
+            max-width: 23ch;
+            margin-inline: auto;
+        }
+    }
 }
 
 .header__bottom {
+    form {
+        display: flex;
+    }
     form input {
         font-size: 1.5rem;
         font-weight: 500;
@@ -188,6 +227,7 @@ header .phone-image {
             opacity: 0.5;
         }
     }
+
     button {
         width: 100%;
         font-size: 1.5rem;
@@ -459,10 +499,3 @@ header .phone-image {
         }
     }
 }
-// media screen for 756px   
-// semmes there is another way to do it with mixin
-// @media (min-width: 765px) {
-//     header {
-//         background-color: white
-//     }
-// }
