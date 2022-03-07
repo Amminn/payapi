@@ -110,9 +110,9 @@ code {
   top: 0%;
   left: 0%;
   background: url("../images/background-elements/full.png") no-repeat center/cover;
-  background-position: 50% -525px;
+  background-position: 50% -555px;
   background-size: 780px;
-  /* giving fixed size to the circel keep it on its position perfectly */
+  /* giving fixed size to the circel keep it on its position perfectly important also when you position it don't give is percentage value you have to give it fixed value like 700px*/
   z-index: -1;
 }
 
@@ -139,6 +139,10 @@ code {
 
 .header.open .header__nav-menu {
   right: 0;
+}
+
+.header {
+  /* don't forget to add margin-left: auto for the btn, and then giving some margin to the logo so the menu will be on its place */
 }
 
 .header__nav {
@@ -208,7 +212,7 @@ code {
   font-weight: bold;
   opacity: 1;
   color: white;
-  padding: 1.6rem 2.4rem 1.4rem;
+  padding: 1.3rem 2.4rem 1.3rem;
   text-align: center;
   border: none;
   outline: none;
@@ -274,11 +278,17 @@ code {
 }
 
 header .phone-image {
-  width: 150px;
+  width: 126px;
   margin: 3.2rem auto 4.8rem;
   border-radius: 20px;
   -webkit-box-shadow: 20px 20px 80px rgba(54, 83, 107, 0.300727);
           box-shadow: 20px 20px 80px rgba(54, 83, 107, 0.300727);
+}
+
+@media (min-width: 768px) {
+  header .phone-image {
+    width: 159px;
+  }
 }
 
 .h2-small {
@@ -299,9 +309,7 @@ header .phone-image {
 }
 
 .header__bottom form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-top: 2.4rem;
 }
 
 .header__bottom form input {
@@ -312,7 +320,6 @@ header .phone-image {
   border: none;
   outline: none;
   background-color: #FBFCFE;
-  margin-top: 2.4rem;
   margin-bottom: 1.6rem;
   padding: 1.6rem 2.4rem 1.4rem;
   -webkit-box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
@@ -376,6 +383,36 @@ header .phone-image {
   color: inherit;
 }
 
+@media (min-width: 768px) {
+  .header__bottom form {
+    min-height: 47px;
+    max-width: 445px;
+    background-color: #FBFCFE;
+    -webkit-box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+            box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+    border-radius: 24px;
+    margin-bottom: 1.6rem;
+    margin-inline: auto;
+    position: relative;
+  }
+  .header__bottom form input {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    padding-right: 18rem;
+    -webkit-box-shadow: initial;
+            box-shadow: initial;
+  }
+  .header__bottom form button {
+    width: 174px;
+    position: absolute;
+    right: 0;
+    margin: 0;
+    -webkit-box-shadow: initial;
+            box-shadow: initial;
+  }
+}
+
 .about {
   position: relative;
   background-color: #1B262F;
@@ -388,7 +425,8 @@ header .phone-image {
   content: '';
   position: absolute;
   background: url("../images/background-elements/full.png") no-repeat;
-  background-position: 50% 159%;
+  background-position: 50% 160%;
+  background-size: 780px;
   height: 60%;
   width: 100%;
   top: 0;
@@ -436,6 +474,28 @@ header .phone-image {
 
 .about .about__text .dark-button-style {
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .about::before {
+    background-position: 50% 130%;
+  }
+  .about .company-logos {
+    width: 80%;
+    gap: 2rem;
+    margin-inline: auto;
+  }
+  .about .company-logos img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .about .about__text {
+    max-width: 475px;
+    margin-inline: auto;
+  }
+  .about .about__text .about__text-paragraph {
+    margin-bottom: 3.2rem;
+  }
 }
 
 .easy-code .coding {
@@ -495,7 +555,7 @@ header .phone-image {
   min-height: 180px;
   background-color: #1B262F;
   border-radius: 0 0 8px 8px;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
 }
 
 .easy-code .coding .code-area pre {
@@ -504,10 +564,16 @@ header .phone-image {
 }
 
 .easy-code .coding .code-area pre code {
+  position: inherit;
   color: #FBFCFE;
   font-size: 1.1rem;
   line-height: 16px;
   text-align: start;
+}
+
+.easy-code .easy-code__bottom {
+  max-width: 573px;
+  margin-inline: auto;
 }
 
 .easy-code .easy-code__bottom .easy-code__bottom-title {
@@ -519,8 +585,10 @@ header .phone-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2.5rem;
   margin-bottom: 4.8rem;
 }
 
@@ -528,6 +596,11 @@ header .phone-image {
   border-radius: 20px;
   -webkit-box-shadow: 20px 15px 80px rgba(54, 83, 107, 0.300727);
           box-shadow: 20px 15px 80px rgba(54, 83, 107, 0.300727);
+}
+
+.ui-ux .ui-ux__text {
+  max-width: 573px;
+  margin-inline: auto;
 }
 
 .ui-ux .ui-ux__text .ui-ux__text-title {
@@ -559,6 +632,23 @@ header .phone-image {
 
 .cards .cards__wrapper h3 {
   margin-bottom: 1.6rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .cards .cards__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 0.5rem;
+  }
+  .cards .cards__wrapper .img {
+    height: 88px;
+    width: 88px;
+  }
+  .cards .cards__wrapper .card:not(:last-child) {
+    margin-bottom: 0rem;
+  }
 }
 
 /* -------footer section------- */
@@ -572,12 +662,14 @@ header .phone-image {
 .footer::before {
   content: '';
   position: absolute;
-  background: url("../images/background-elements/full.png") no-repeat;
-  background-position: 50% -50%;
   height: 100%;
   width: 100%;
-  bottom: 0;
-  left: 0;
+  top: 0%;
+  left: 0%;
+  background: url("../images/background-elements/full.png") no-repeat center/cover;
+  background-position: 50% 185px;
+  background-size: 780px;
+  /* giving fixed size to the circel keep it on its position perfectly important also when you position it don't give is percentage value you have to give it fixed value like 700px*/
   z-index: -1;
 }
 
@@ -617,5 +709,59 @@ header .phone-image {
 .footer .social-icons i {
   font-size: 2.4rem;
   color: #FBFCFE;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 0 0;
+  }
+  .footer::before {
+    background-position: 600px 15%;
+  }
+  .footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100px;
+  }
+  .footer .container .logo {
+    margin-bottom: 0rem;
+  }
+  .footer .container .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: auto;
+    margin-bottom: 0;
+  }
+  .footer .container .nav ul {
+    width: 20rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 4rem;
+    margin-left: 6.4rem;
+  }
+  .footer .social-icons {
+    margin: 0 0 0 auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */
