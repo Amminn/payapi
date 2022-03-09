@@ -117,6 +117,12 @@ code {
     background-size: 949px;
   }
 }
+@media (min-width: 1100px) {
+  .header::before {
+    background-position: 190% -328px;
+    background-size: 949px;
+  }
+}
 
 .container {
   width: 100%;
@@ -128,6 +134,11 @@ code {
   .container {
     max-width: 768px;
     padding: 0 4rem;
+  }
+}
+@media (min-width: 1100px) {
+  .container {
+    max-width: 1100px;
   }
 }
 
@@ -216,13 +227,16 @@ code {
   .header .hidden {
     display: none;
   }
+  .header__nav {
+    justify-content: normal;
+  }
   .header__nav-menu {
+    width: 100%;
     position: initial;
     height: 4rem;
-    width: initial;
     background-color: transparent;
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 6.4rem;
     /* adding the style of the menu */
     display: flex;
     justify-content: space-between;
@@ -236,7 +250,33 @@ code {
     padding: 0 1rem;
   }
   .header__nav-menu .nav--button {
-    margin: 0 0 0 4rem;
+    margin: 0 0 0 auto;
+    width: initial;
+  }
+}
+@media (min-width: 1100px) {
+  .header .flex {
+    display: flex;
+    margin-top: 74px;
+    align-items: center;
+  }
+  .header .flex img {
+    order: 1;
+  }
+  .header .header__bottom .header__bottom-title {
+    text-align: left;
+    font-size: 7.2rem;
+    max-width: 16ch;
+    line-height: 72px;
+    letter-spacing: -0.553846px;
+    margin-bottom: 2rem;
+  }
+  .header .header__bottom form {
+    margin-inline: initial;
+  }
+  .header .header__bottom .header__bottom-question {
+    text-align: left;
+    margin-left: 2.5rem;
   }
 }
 
@@ -249,6 +289,11 @@ header .phone-image {
 @media (min-width: 768px) {
   header .phone-image {
     width: 159px;
+  }
+}
+@media (min-width: 1100px) {
+  header .phone-image {
+    width: 263px;
   }
 }
 

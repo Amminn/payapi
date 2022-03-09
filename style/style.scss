@@ -39,6 +39,12 @@
                 background-size: 949px;
             }
         }
+        @include breakpoint(laptop) {
+            & {
+                background-position: 190% -328px;
+                background-size: 949px;
+            }
+        }
     }
 }
 
@@ -52,6 +58,11 @@
         & {
             max-width: 768px;
             padding: 0 4rem;
+        }
+    }
+    @include breakpoint(laptop) {
+        & {
+            max-width: 1100px;
         }
     }
 }
@@ -152,14 +163,18 @@
             display: none;
         }
 
+        &__nav {
+            justify-content: normal;
+        }
+
         &__nav-menu {
+            width: 100%;
             position: initial;
             height: 4rem;
-            width: initial;
+            // width: initial;
             background-color: transparent;
             padding: 0;
-            margin: 0;
-            
+            margin: 0 0 0 6.4rem;
             /* adding the style of the menu */
             display: flex;
             justify-content: space-between;
@@ -174,9 +189,47 @@
             }
 
             & .nav--button {
-                margin: 0 0 0 4rem;
+                margin: 0 0 0 auto;
+                width: initial
             }
         }
+    }
+    @include breakpoint(laptop) {
+
+
+        .flex {
+            display: flex;
+            margin-top: 74px;
+            align-items: center;
+
+            img {
+                order: 1;
+            }
+        }
+
+        .header__bottom {
+
+            .header__bottom-title {
+                text-align: left;
+                font-size: 7.2rem;
+                max-width: 16ch;
+                line-height: 72px;
+                letter-spacing: -0.553846px;
+                margin-bottom: 2rem;
+            }
+
+            form {
+                margin-inline: initial;
+            }
+
+            & .header__bottom-question {
+                text-align: left;
+                margin-left: 2.5rem;
+            }
+        }
+
+
+
     }
 }
 
@@ -191,6 +244,9 @@ header .phone-image {
         & {
             width: 159px;
         }
+    }
+    @include breakpoint(laptop) {
+        width: 263px;
     }
 }
 
