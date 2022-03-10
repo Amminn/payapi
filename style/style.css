@@ -762,12 +762,12 @@ header .phone-image {
   .ui-ux .container::before {
     content: '';
     position: absolute;
-    height: 229%;
-    width: 100%;
-    top: -65%;
-    left: 53%;
+    height: 128%;
+    width: 33%;
+    top: -14%;
+    left: 70%;
     background: url(../images/background-elements/full.png) no-repeat center/cover;
-    background-size: 560px;
+    background-size: 357px;
     z-index: -1;
   }
   .ui-ux .ui-ux__images-side {
@@ -846,6 +846,7 @@ header .phone-image {
   margin-top: 4rem;
   background-color: #1B262F;
   position: relative;
+  overflow: hidden;
   z-index: 0;
 }
 
