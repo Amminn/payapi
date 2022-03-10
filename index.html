@@ -12,6 +12,7 @@
     <title>PayApi</title>
   </head>
   <body>
+    <main>
     <header class="section header" id="header">
       <div class="container">
         <nav class="header__nav">
@@ -67,23 +68,25 @@
 
     <section class="about section">
       <div class="container">
-        <div class="company-logos">
-          <img src="./images/companiesSVG/tesla.svg" alt="tesla logo" />
-          <img src="./images/companiesSVG/microsoft.svg" alt="microsoft logo" />
-          <img src="./images/companiesSVG/hp.svg" alt="hp logo" />
-          <img src="./images/companiesSVG/orcale.svg" alt="orcale logo" />
-          <img src="./images/companiesSVG/Google.svg" alt="google logo" />
-          <img src="./images/companiesSVG/nvidia.svg" alt="nvidia logo" />
-        </div>
-        <div class="about__text">
-          <h2 class="about__text-title h2-small">Who we work with</h2>
-          <p class="about__text-paragraph second-paragraph">
-            Today, millions of people around the world have successfully
-            connected their accounts to apps they love using our API. We provide
-            developers with the tools they need to create easy and accessible
-            experiences for their users.
-          </p>
-          <a href="#" class="dark-button-style">About Us</a>
+        <div class="flex">
+          <div class="company-logos">
+            <img src="./images/companiesSVG/tesla.svg" alt="tesla logo" />
+            <img src="./images/companiesSVG/microsoft.svg" alt="microsoft logo" />
+            <img src="./images/companiesSVG/hp.svg" alt="hp logo" />
+            <img src="./images/companiesSVG/orcale.svg" alt="orcale logo" />
+            <img src="./images/companiesSVG/Google.svg" alt="google logo" />
+            <img src="./images/companiesSVG/nvidia.svg" alt="nvidia logo" />
+          </div>
+          <div class="about__text">
+            <h2 class="about__text-title h2-small">Who we work with</h2>
+            <p class="about__text-paragraph second-paragraph text-left-lg">
+              Today, millions of people around the world have successfully
+              connected their accounts to apps they love using our API. We provide
+              developers with the tools they need to create easy and accessible
+              experiences for their users.
+            </p>
+            <a href="#" class="dark-button-style">About Us</a>
+          </div>
         </div>
       </div>
     </section>
@@ -92,7 +95,7 @@
 
     <section class="easy-code section section-margin">
       <div class="container">
-        <div class="wrapper">
+        <div class="wrapper flex">
           <div class="coding">
             <div class="nav">
               <div class="buttons">
@@ -120,7 +123,7 @@
 
           <div class="easy-code__bottom">
             <h2 class="easy-code__bottom-title h2-small">Easy to implement</h2>
-            <p class="easy-code__bottom-paragraph second-paragraph">
+            <p class="easy-code__bottom-paragraph second-paragraph text-left-lg">
                 Our API comes with just a few lines of code. You’ll be up and running in no time. We built our documentation page to integrate payments functionality with ease.
             </p>
           </div>
@@ -132,16 +135,18 @@
 
     <section class="section section-margin ui-ux">
         <div class="container">
+          <div class="flex">
             <div class="ui-ux__images-side">
                 <img src="./images/phones/twoPhones.png" alt="phones mockup" srcset="">
                 <img src="./images/phones/twoPhones2.png" alt="phones mockup" srcset="">
             </div>
             <div class="ui-ux__text">
                 <h2 class="ui-ux__text-title h2-small">Simple UI & UX</h2>
-                <p class="ui-ux__text-paragraph second-paragraph">
+                <p class="ui-ux__text-paragraph second-paragraph text-left-lg">
                     Our pre-built form is easy to integrate in your app or website’s checkout flow and designed to optimize conversion. 
                   </p>
             </div>
+          </div>
         </div>
     </section>
 
@@ -179,18 +184,20 @@
 
     <section class="section section-margin read-email">
         <div class="container">
-            <div class="header__bottom">
+            <div class="header__bottom flex">
                 <h2 class="header__bottom-title h2-small">
                     Ready to start?
                 </h2>
-                <form class="header__bottom-form" action="" method="post">
-                  <input type="email" placeholder="Enter email address" />
-                  <button>Schedule a Demo</button>
-                </form>
+                <div class="fix-button">
+                  <form class="header__bottom-form" action="" method="post">
+                    <input type="email" placeholder="Enter email address" />
+                    <button>Schedule a Demo</button>
+                  </form>
+                </div>
         </div>
     </section>
 
-    <!-- -------footer------- -->
+    <!-- ------- footer ------- -->
 
     <footer class="footer section">
         <div class="container">
@@ -227,6 +234,7 @@
             </div>
         </div>
     </footer>
+  </main>
 
     <script src="index.js"></script>
   </body>

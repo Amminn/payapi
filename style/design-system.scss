@@ -8,13 +8,16 @@ html {
     font-size: 10px; // 1rem = 10px
     font-family: 'Public Sans', sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden !important;
 }
 
 body {
     background-color: $primary-background-color;
-    // max-width: 100%;
+    width: 100%;
+    max-width: 100%;
     min-height: 100vh;
-    overflow-x: hidden;
+    // overflow-y: hidden;
+    // if i give fixed width the the body the circel won't keep moving around so the point is to fix the width and not let it free 
 }
 
 a {
@@ -90,4 +93,16 @@ code {
     text-align: center;
     color: $secondary-Light-San-Juan-Blue;
 }
+
+@include breakpoint(laptop) {
+    .flex {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+    }
+    .text-left-lg {
+        text-align: left;
+    }
+}
+
 

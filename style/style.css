@@ -14,12 +14,14 @@ html {
   font-size: 10px;
   font-family: 'Public Sans', sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden !important;
 }
 
 body {
   background-color: #EDF3F8;
+  width: 100%;
+  max-width: 100%;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 a {
@@ -95,6 +97,21 @@ code {
   color: #6C8294;
 }
 
+@media (min-width: 1100px) {
+  .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 5rem;
+  }
+  .text-left-lg {
+    text-align: left;
+  }
+}
+
 .header {
   position: relative;
   width: 100%;
@@ -118,20 +135,39 @@ code {
 
 @media (min-width: 768px) {
   .header::before {
-    background-position: 50% -700px;
-    background-size: 949px;
+    background-position: 50% -1264px;
+    background-size: 1524px;
   }
 }
 
 @media (min-width: 1100px) {
   .header::before {
-    background-position: 190% -328px;
-    background-size: 949px;
+    display: none;
+  }
+}
+
+@media (min-width: 1100px) {
+  .header {
+    position: static;
+  }
+  .header .container {
+    position: relative;
+  }
+  .header .container::before {
+    content: '';
+    position: absolute;
+    height: 120%;
+    width: 100%;
+    top: -35%;
+    left: 45%;
+    background: url("../images/background-elements/full.png") no-repeat center/cover;
+    background-size: 780px;
+    /* giving fixed size to the circel keep it on its position perfectly important also when you position it don't give is percentage value you have to give it fixed value like 700px*/
+    z-index: -1;
   }
 }
 
 .container {
-  width: 100%;
   max-width: 536px;
   margin: 0 auto;
   padding: 0 2.5rem;
@@ -242,7 +278,7 @@ code {
 }
 
 .header__nav .toggle {
-  cursor: pointer !important;
+  cursor: pointer;
   font-size: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -298,13 +334,7 @@ code {
 
 @media (min-width: 1100px) {
   .header .flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     margin-top: 74px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .header .flex img {
     -webkit-box-ordinal-group: 2;
@@ -362,6 +392,14 @@ header .phone-image {
     letter-spacing: -0.369231px;
     max-width: 23ch;
     margin-inline: auto;
+  }
+}
+
+@media (min-width: 1100px) {
+  .h2-small {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -474,8 +512,6 @@ header .phone-image {
   position: relative;
   background-color: #1B262F;
   padding: 8rem 0;
-  overflow: hidden;
-  height: 100%;
 }
 
 .about::before {
@@ -536,6 +572,8 @@ header .phone-image {
 @media (min-width: 768px) {
   .about::before {
     background-position: 50% 130%;
+    background-size: 977px;
+    height: 60%;
   }
   .about .company-logos {
     width: 80%;
@@ -555,10 +593,51 @@ header .phone-image {
   }
 }
 
+@media (min-width: 768px) and (min-width: 1100px) {
+  .about {
+    overflow: hidden;
+  }
+  .about::before {
+    display: none;
+  }
+  .about .container {
+    position: relative;
+  }
+  .about .container::before {
+    content: '';
+    position: absolute;
+    background: url("../images/background-elements/full.png") no-repeat;
+    background-position: 50% 160%;
+    background-size: 630px;
+    height: 217%;
+    width: 100%;
+    top: -87%;
+    left: -44%;
+    z-index: 1000;
+  }
+}
+
+@media (min-width: 1100px) {
+  .about .company-logos {
+    margin-bottom: 0;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .about .h2-small {
+    text-align: left;
+  }
+  .about .about__text .about__text-paragraph {
+    text-align: left;
+  }
+  .about .about__text .dark-button-style {
+    margin: 0 0;
+  }
+}
+
 .easy-code .coding {
   width: 100%;
   max-width: 380px;
-  min-width: 300px;
   margin: 0 auto;
   margin-bottom: 4.8rem;
   border-radius: 8px;
@@ -637,6 +716,15 @@ header .phone-image {
   margin-bottom: 2.4rem;
 }
 
+@media (min-width: 1100px) {
+  .easy-code .coding {
+    margin-bottom: 0;
+  }
+  .easy-code .easy-code__bottom {
+    max-width: 500px;
+  }
+}
+
 .ui-ux .ui-ux__images-side {
   width: 100%;
   display: -webkit-box;
@@ -647,6 +735,9 @@ header .phone-image {
           justify-content: center;
   gap: 2.5rem;
   margin-bottom: 4.8rem;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 
 .ui-ux .ui-ux__images-side img {
@@ -662,6 +753,26 @@ header .phone-image {
 
 .ui-ux .ui-ux__text .ui-ux__text-title {
   margin-bottom: 2.4rem;
+}
+
+@media (min-width: 1100px) {
+  .ui-ux .container {
+    position: relative;
+  }
+  .ui-ux .container::before {
+    content: '';
+    position: absolute;
+    height: 229%;
+    width: 100%;
+    top: -65%;
+    left: 53%;
+    background: url(../images/background-elements/full.png) no-repeat center/cover;
+    background-size: 560px;
+    z-index: -1;
+  }
+  .ui-ux .ui-ux__images-side {
+    margin-bottom: 0;
+  }
 }
 
 .cards .cards__wrapper .card:not(:last-child) {
@@ -708,6 +819,28 @@ header .phone-image {
   }
 }
 
+@media (min-width: 768px) and (min-width: 1100px) {
+  .cards .cards__wrapper {
+    gap: 5rem;
+  }
+}
+
+/* -------Read Email------- */
+@media (min-width: 768px) {
+  .read-email .flex {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .read-email .fix-button {
+    width: 500px;
+    margin-inline: auto;
+  }
+  .read-email .header__bottom form input {
+    margin: 0;
+  }
+}
+
 /* -------footer section------- */
 .footer {
   margin-top: 4rem;
@@ -722,7 +855,7 @@ header .phone-image {
   height: 100%;
   width: 100%;
   top: 0%;
-  left: 0%;
+  right: 0%;
   background: url("../images/background-elements/full.png") no-repeat center/cover;
   background-position: 50% 185px;
   background-size: 780px;
@@ -771,9 +904,26 @@ header .phone-image {
 @media (min-width: 768px) {
   .footer {
     padding: 0 0;
+    position: static;
   }
   .footer::before {
-    background-position: 600px 15%;
+    display: none;
+  }
+  .footer .container {
+    position: relative;
+    z-index: 0;
+  }
+  .footer .container::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: -40%;
+    background: url("../images/background-elements/Bitmap-bottom.png") no-repeat center/cover;
+    background-size: 780px;
+    /* giving fixed size to the circel keep it on its position perfectly important also when you position it don't give is percentage value you have to give it fixed value like 700px*/
+    z-index: -1;
   }
   .footer .container {
     display: -webkit-box;
