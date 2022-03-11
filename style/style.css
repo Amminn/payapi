@@ -22,6 +22,7 @@ body {
   width: 100%;
   max-width: 100%;
   min-height: 100vh;
+  overflow-y: hidden;
 }
 
 a {
@@ -97,7 +98,7 @@ code {
   color: #6C8294;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1300px) {
   .flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -140,13 +141,13 @@ code {
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1300px) {
   .header::before {
     display: none;
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1300px) {
   .header {
     position: static;
   }
@@ -180,9 +181,9 @@ code {
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1300px) {
   .container {
-    max-width: 1100px;
+    max-width: 1113px;
   }
 }
 
@@ -332,7 +333,7 @@ code {
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1300px) {
   .header .flex {
     margin-top: 74px;
   }
@@ -372,7 +373,7 @@ header .phone-image {
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1300px) {
   header .phone-image {
     width: 263px;
   }
@@ -380,9 +381,13 @@ header .phone-image {
 
 .h2-small {
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   line-height: 36px;
   letter-spacing: -0.25px;
+}
+
+.h2-small.lg {
+  font-size: 3.6rem;
 }
 
 @media (min-width: 768px) {
@@ -393,9 +398,12 @@ header .phone-image {
     max-width: 23ch;
     margin-inline: auto;
   }
+  .h2-small.lg {
+    font-size: 4.8rem;
+  }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1300px) {
   .h2-small {
     text-align: left;
     margin-left: 0;
@@ -403,6 +411,7 @@ header .phone-image {
   }
 }
 
+/* two titles are a little bit bigger on the on the phone size screen */
 .header__bottom form {
   margin-top: 2.4rem;
 }
@@ -558,7 +567,8 @@ header .phone-image {
 
 .about .about__text .about__text-paragraph {
   font-size: 1.5rem;
-  font-weight: 300;
+  color: inherit;
+  font-weight: 200;
   text-align: center;
   line-height: 28px;
   margin-bottom: 6rem;
@@ -593,7 +603,7 @@ header .phone-image {
   }
 }
 
-@media (min-width: 768px) and (min-width: 1100px) {
+@media (min-width: 768px) and (min-width: 1300px) {
   .about {
     overflow: hidden;
   }
@@ -602,6 +612,7 @@ header .phone-image {
   }
   .about .container {
     position: relative;
+    z-index: 0;
   }
   .about .container::before {
     content: '';
@@ -613,11 +624,11 @@ header .phone-image {
     width: 100%;
     top: -87%;
     left: -44%;
-    z-index: 1000;
+    z-index: -1;
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1300px) {
   .about .company-logos {
     margin-bottom: 0;
     -webkit-box-ordinal-group: 3;
@@ -631,6 +642,9 @@ header .phone-image {
     text-align: left;
   }
   .about .about__text .dark-button-style {
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
     margin: 0 0;
   }
 }
@@ -691,20 +705,32 @@ header .phone-image {
   min-height: 180px;
   background-color: #1B262F;
   border-radius: 0 0 8px 8px;
-  padding: 1rem 2rem;
-}
-
-.easy-code .coding .code-area pre {
-  max-width: 100%;
-  height: 100%;
+  padding: 0rem 2rem;
 }
 
 .easy-code .coding .code-area pre code {
-  position: inherit;
+  position: absolute;
+  left: 0;
   color: #FBFCFE;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   line-height: 16px;
   text-align: start;
+}
+
+@media (min-width: 768px) {
+  .easy-code .coding .code-area pre code {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .easy-code .coding .code-area {
+    min-height: 197px;
+    padding: 1rem 2rem;
+  }
+  .easy-code .coding .code-area pre code {
+    font-size: 1.3rem;
+  }
 }
 
 .easy-code .easy-code__bottom {
@@ -716,9 +742,9 @@ header .phone-image {
   margin-bottom: 2.4rem;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1300px) {
   .easy-code .coding {
-    margin-bottom: 0;
+    margin: 0;
   }
   .easy-code .easy-code__bottom {
     max-width: 500px;
@@ -744,6 +770,19 @@ header .phone-image {
   border-radius: 20px;
   -webkit-box-shadow: 20px 15px 80px rgba(54, 83, 107, 0.300727);
           box-shadow: 20px 15px 80px rgba(54, 83, 107, 0.300727);
+  max-width: 152px;
+}
+
+@media (min-width: 768px) {
+  .ui-ux .ui-ux__images-side img {
+    max-width: 168.32px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .ui-ux .ui-ux__images-side img {
+    max-width: 263px;
+  }
 }
 
 .ui-ux .ui-ux__text {
@@ -755,19 +794,19 @@ header .phone-image {
   margin-bottom: 2.4rem;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1300px) {
   .ui-ux .container {
     position: relative;
   }
   .ui-ux .container::before {
     content: '';
     position: absolute;
-    height: 128%;
+    height: 149%;
     width: 33%;
-    top: -14%;
-    left: 70%;
-    background: url(../images/background-elements/full.png) no-repeat center/cover;
-    background-size: 357px;
+    top: -112px;
+    left: 74%;
+    background: url(../images/background-elements/Bitmap-right.png) no-repeat center/cover;
+    background-size: 368px;
     z-index: -1;
   }
   .ui-ux .ui-ux__images-side {
@@ -819,9 +858,12 @@ header .phone-image {
   }
 }
 
-@media (min-width: 768px) and (min-width: 1100px) {
+@media (min-width: 768px) and (min-width: 1300px) {
   .cards .cards__wrapper {
     gap: 5rem;
+  }
+  .cards .cards__wrapper .card {
+    width: 350px;
   }
 }
 
@@ -838,6 +880,17 @@ header .phone-image {
   }
   .read-email .header__bottom form input {
     margin: 0;
+  }
+}
+
+@media (min-width: 1300px) {
+  .read-email .fix-button {
+    margin-inline: 0;
+    margin-left: auto;
+  }
+  .read-email .header__bottom form {
+    margin-inline: 0;
+    margin-left: auto;
   }
 }
 
@@ -920,7 +973,7 @@ header .phone-image {
     height: 100%;
     width: 100%;
     top: 0%;
-    right: -40%;
+    right: -52%;
     background: url("../images/background-elements/Bitmap-bottom.png") no-repeat center/cover;
     background-size: 780px;
     /* giving fixed size to the circel keep it on its position perfectly important also when you position it don't give is percentage value you have to give it fixed value like 700px*/

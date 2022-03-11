@@ -80,7 +80,7 @@
     }
     @include breakpoint(laptop) {
         & {
-            max-width: 1100px;
+            max-width: 1113px;
         }
     }
 }
@@ -260,13 +260,15 @@ header .phone-image {
     }
 }
 
-
-
 .h2-small {
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     line-height: 36px;
     letter-spacing: -0.25px;
+
+    &.lg {
+        font-size: 3.6rem;
+    }
 
     @include breakpoint(tablet) {
         & {
@@ -275,6 +277,9 @@ header .phone-image {
             letter-spacing: -0.369231px;
             max-width: 23ch;
             margin-inline: auto;
+        }
+        &.lg {
+            font-size: 4.8rem;
         }
     }
     @include breakpoint(laptop) {
@@ -285,6 +290,9 @@ header .phone-image {
         }
     }
 }
+
+/* two titles are a little bit bigger on the on the phone size screen */ 
+
 
 .header__bottom {
 
@@ -415,7 +423,8 @@ header .phone-image {
         }
         .about__text-paragraph { // this one is for the dark paragarph
             font-size: 1.5rem;
-            font-weight: 300;
+            color: inherit;
+            font-weight: 200;
             text-align: center;
             line-height: 28px;
             margin-bottom: 6rem;
@@ -459,6 +468,7 @@ header .phone-image {
 
         & .container {
             position: relative;
+            z-index: 0;
 
             &::before {
                 content: '';
@@ -470,7 +480,7 @@ header .phone-image {
                 width: 100%;
                 top: -87%;
                 left: -44%;
-                z-index: 1000;
+                z-index: -1;
             }
         }
     }
@@ -491,9 +501,9 @@ header .phone-image {
             }
 
             .dark-button-style {
+                min-width: fit-content;
                 margin: 0 0;
             }
-
         }
     }
 }
@@ -549,18 +559,36 @@ header .phone-image {
             min-height: 180px;
             background-color: $secondary-Mirage-Blue;
             border-radius: 0 0 8px 8px;
-            padding: 1rem 2rem;
+            padding: 0rem 2rem;
 
             pre {
-                max-width: 100%;
-                height: 100%;
 
                 code {
-                    position: inherit;
-                    color: $primary-Water-White;
-                    font-size: 1.1rem;
+                    position: absolute;
+                    left: 0;
+                    color: #FBFCFE;
+                    font-size: 0.9rem;
                     line-height: 16px;
                     text-align: start;
+
+                }
+            }
+            @include breakpoint(tablet) {
+                pre {
+                    code {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+    
+            @include breakpoint(laptop) {
+                min-height: 197px;
+                padding: 1rem 2rem;
+    
+                pre {
+                    code {
+                        font-size: 1.3rem;
+                    }
                 }
             }
         }
@@ -577,7 +605,7 @@ header .phone-image {
 
     @include breakpoint(laptop) {
         & .coding {
-            margin-bottom: 0;
+            margin: 0;
         }
         .easy-code__bottom {
             max-width: 500px;
@@ -599,6 +627,18 @@ header .phone-image {
     .ui-ux__images-side img {
         border-radius: 20px;
         box-shadow: 20px 15px 80px rgba(54, 83, 107, 0.300727);
+        max-width: 152px;
+
+        @include breakpoint(tablet) {
+            & {
+                max-width: 168.32px;
+            }
+        }
+        @include breakpoint(laptop) {
+            & {
+                max-width: 263px;
+            }
+        }
     }
 
     .ui-ux__text {
@@ -618,16 +658,15 @@ header .phone-image {
             &::before {
                 content: '';
                 position: absolute;
-                height: 128%;
+                height: 149%;
                 width: 33%;
-                top: -14%;
-                left: 70%;
-                background: url(../images/background-elements/full.png) no-repeat center/cover;
-                background-size: 357px;
+                top: -112px;
+                left: 74%;
+                background: url(../images/background-elements/Bitmap-right.png) no-repeat center/cover;
+                background-size: 368px;
                 z-index: -1;
             }
         }
-
 
         .ui-ux__images-side {
             margin-bottom: 0;
@@ -680,6 +719,10 @@ header .phone-image {
         @include breakpoint(laptop) {
             .cards__wrapper {
                 gap: 5rem;
+
+                .card {
+                    width: 350px;
+                }
             }
         }
     }
@@ -700,8 +743,17 @@ header .phone-image {
             margin: 0;
         }
     }
+    @include breakpoint(laptop) {
+        .fix-button {
+            margin-inline: 0;
+            margin-left: auto;
+        }
+        .header__bottom form {
+            margin-inline: 0;
+            margin-left: auto;
+        }
+    }
 }
-
 
  /* -------footer section------- */
 
@@ -778,15 +830,14 @@ header .phone-image {
                     height: 100%;
                     width: 100%;
                     top: 0%;
-                    right: -40%;
+                    right: -52%;
                     background: url('../images/background-elements/Bitmap-bottom.png') no-repeat center/cover;
                     // background-position: 50% 185px;
                     background-size: 780px; /* giving fixed size to the circel keep it on its position perfectly important also when you position it don't give is percentage value you have to give it fixed value like 700px*/
                     z-index: -1; 
                 }
             }
-
-
+ 
             .container {
                 display: flex;
                 justify-content: space-between;
