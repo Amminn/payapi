@@ -9,6 +9,3 @@ function opening() {
 function closing() {
     header.classList.remove('open')
 }
-
-
-

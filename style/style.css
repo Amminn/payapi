@@ -80,6 +80,7 @@ code {
   border: 1px solid #FBFCFE;
   border-radius: 24px;
   padding: 1.6rem 3.2rem 1.4rem;
+  cursor: pointer;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
@@ -96,6 +97,13 @@ code {
   line-height: 28px;
   text-align: center;
   color: #6C8294;
+}
+
+.error-message {
+  position: absolute;
+  color: #ff4545;
+  font-size: 1.6rem;
+  margin-top: -2.2rem;
 }
 
 @media (min-width: 1300px) {
@@ -425,10 +433,11 @@ header .phone-image {
   outline: none;
   background-color: #FBFCFE;
   margin-bottom: 1.6rem;
-  padding: 1.6rem 2.4rem 1.4rem;
-  -webkit-box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
-          box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+  padding: 1.4rem 2.4rem 1.4rem;
+  -webkit-box-shadow: 10px 10px 25px -10px #36536B;
+          box-shadow: 10px 10px 25px -10px #36536B;
   border-radius: 24px;
+  opacity: 0.5;
 }
 
 .header__bottom form input::-webkit-input-placeholder {
@@ -460,7 +469,7 @@ header .phone-image {
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
-  padding: 1.6rem 2.4rem 1.4rem;
+  padding: 1.4rem 2.4rem 1.4rem;
   text-align: center;
   border: none;
   outline: none;
@@ -1023,6 +1032,447 @@ header .phone-image {
   }
   .footer .social-icons {
     margin: 0 0 0 auto;
+  }
+}
+
+/* second pages */
+.second {
+  /* about */
+  /* ---contact page--- */
+}
+
+.second header {
+  margin-bottom: 0;
+}
+
+.second main {
+  margin-top: 8rem;
+}
+
+.second .pricing-title {
+  margin-bottom: 4.8rem;
+}
+
+.second .divider {
+  width: 100%;
+  height: 1px;
+  background-color: #36536B;
+  opacity: 0.5;
+  margin: 2.4rem 0;
+}
+
+.second .planes .plan:not(:last-child) {
+  margin-bottom: 4.8rem;
+}
+
+.second .planes .pink-title {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #BA4270;
+  margin-bottom: 1.7rem;
+}
+
+.second .planes .second-paragraph {
+  margin-bottom: 0.8rem;
+}
+
+.second .planes .biggest-price {
+  text-align: center;
+  font-size: 5.6rem;
+  letter-spacing: -0.430769px;
+  line-height: 72px;
+}
+
+.second .planes ul {
+  font-size: 1.6rem;
+  color: #36536B;
+  width: 13.4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.second .planes ul li {
+  opacity: 0.5;
+  margin-bottom: 0.8rem;
+  padding-left: 1rem;
+}
+
+.second .planes ul li.checked {
+  list-style-image: url("../images/icons/pink-check.png");
+  opacity: 1;
+}
+
+.second .dark-button-style {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+  color: #36536B;
+  border-color: #36536B;
+}
+
+.second .dark-button-style:hover {
+  color: white;
+  background-color: #36536B;
+}
+
+@media (min-width: 768px) {
+  .second .main-title-pricing {
+    margin-top: 3.5rem;
+    margin-bottom: 6.9rem;
+  }
+  .second .planes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .second .planes .plan:not(:last-child) {
+    margin-bottom: 0rem;
+  }
+  .second .planes .plan {
+    width: 223px;
+  }
+  .second .planes .plan .biggest-price {
+    font-size: 4.8rem;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 1300px) {
+  .second .dark-button-style {
+    margin-inline: 0;
+  }
+  .second .planes ul {
+    margin-left: 3rem;
+  }
+  .second .planes .plan {
+    width: 320px;
+  }
+  .second .planes .plan .text-left-lg {
+    text-align: left;
+  }
+}
+
+.second .full-image img {
+  min-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.second .informations .information-two-column:first-of-type {
+  margin-bottom: 4.8rem;
+}
+
+.second .informations .h2-small {
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+  letter-spacing: -0.184615px;
+}
+
+.second .informations .second-paragraph {
+  font-weight: 400;
+}
+
+.second .statistics .statistic .hide-small-screen {
+  display: none;
+}
+
+.second .statistics .statistic:not(:nth-last-of-type(1)) {
+  margin-bottom: 3.2rem;
+}
+
+.second .statistics .statistic .static-title {
+  text-align: center;
+  font-family: 'Public Sans';
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 28px;
+  color: #36536B;
+  opacity: 0.7;
+}
+
+.second .statistics .statistic .big-num {
+  text-align: center;
+  font-size: 5.6rem;
+  font-weight: 400;
+  line-height: 72px;
+  letter-spacing: -0.430769px;
+  color: #BA4270;
+}
+
+@media (min-width: 768px) {
+  .second .full-image img {
+    min-height: 267px;
+  }
+  .second .main-title-about {
+    margin-top: 3.5rem;
+    margin-bottom: 5.4rem;
+  }
+  .second .informations .information-two-column:first-of-type {
+    margin-bottom: 6.4rem;
+  }
+  .second .informations .information-two-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .second .informations .h2-small {
+    width: 32%;
+    font-size: 3.2rem;
+    margin-bottom: 0;
+    text-align: left;
+    line-height: 1;
+    margin: 0;
+  }
+  .second .informations .second-paragraph {
+    text-align: left;
+    width: 66%;
+    font-weight: 400;
+  }
+  .second .statistics .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .second .statistics .statistic {
+    width: 223px;
+  }
+  .second .statistics .statistic .hide-small-screen {
+    display: block;
+  }
+  .second .statistics .statistic:not(:nth-last-of-type(1)) {
+    margin-bottom: 0rem;
+  }
+  .second .statistics .statistic .static-title {
+    text-align: left;
+  }
+  .second .statistics .statistic .big-num {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1300px) {
+  .second .full-image img {
+    min-height: 500px;
+    margin-inline: auto;
+  }
+  .second .main-title-about {
+    margin-top: 3.5rem;
+    margin-bottom: 5.1rem;
+  }
+  .second .main-title-about, .second .informations {
+    margin-left: 9.6rem;
+  }
+  .second .informations .information-two-column .h2-small {
+    width: 28%;
+  }
+  .second .informations .information-two-column .second-paragraph {
+    width: 68%;
+  }
+  .second .statistics .statistic {
+    width: 340px;
+  }
+}
+
+.second .main-title-contact {
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.second .form form {
+  font-size: 1.5rem;
+  margin-bottom: 8rem;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+.second .form form input, .second .form form textarea {
+  width: 100%;
+  color: #36536B;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  background-color: #EDF3F8;
+  border-bottom: 2px solid #36536B;
+  margin-bottom: 2.4rem;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.second .form form input:hover, .second .form form input:focus, .second .form form input:active, .second .form form input:visited, .second .form form textarea:hover, .second .form form textarea:focus, .second .form form textarea:active, .second .form form textarea:visited {
+  opacity: 1;
+}
+
+.second .form form .check-container {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 12px;
+  margin-top: 6px;
+  cursor: pointer;
+  font-size: 22px;
+  height: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.second .form form .check-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.second .form form .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #6C8294;
+}
+
+.second .form form .check-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.second .form form .check-container input:checked ~ .checkmark {
+  background-color: #BA4270;
+}
+
+.second .form form .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.second .form form .check-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.second .form form .check-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.second .form form .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2.4rem;
+}
+
+.second .form form .flex .checkbox-container {
+  width: 50px;
+}
+
+.second .form form .flex label.info {
+  width: 80%;
+  color: #36536B;
+  text-align: left;
+  line-height: initial;
+}
+
+.second .form form .dark-button-style {
+  margin-left: 0;
+}
+
+.second .blue-companies-icons .title {
+  font-size: 2.4rem;
+  margin-bottom: 3.2rem;
+  text-align: center;
+}
+
+.second .blue-companies-icons .company-logos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(119px, 146px))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(119px, 146px));
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .second .main-title-contact {
+    max-width: 21ch;
+    font-size: 4.8rem;
+    margin-bottom: 5.4rem;
+  }
+  .second .form {
+    max-width: 445px;
+    margin-inline: auto;
+  }
+  .second .blue-companies-icons .title {
+    margin-inline: auto;
+    max-width: 445px;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .second .main-title-contact {
+    max-width: 26ch;
+    margin-inline: initial;
+  }
+  .second .contact-page-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .second .contact-page-wrapper .form {
+    margin-inline: initial;
+  }
+  .second .contact-page-wrapper .form form {
+    margin-bottom: 0;
+  }
+  .second .contact-page-wrapper .form form .check-container {
+    padding-left: 0px;
+    margin-bottom: 12px;
+    margin-top: 0px;
+    height: 15px;
+  }
+  .second .contact-page-wrapper .form .flex {
+    margin-top: 0;
+  }
+  .second .contact-page-wrapper .blue-companies-icons {
+    width: 541px;
+  }
+  .second .contact-page-wrapper .blue-companies-icons .title {
+    text-align: left;
+    margin-inline: initial;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -77,6 +77,7 @@ code {
     border: 1px solid $primary-Water-White;
     border-radius: 24px;
     padding: 1.6rem 3.2rem 1.4rem;
+    cursor: pointer;
     transition: 0.3s ease;
 
     &:hover {
@@ -94,6 +95,13 @@ code {
     color: $secondary-Light-San-Juan-Blue;
 }
 
+.error-message {
+    position: absolute;
+    color: #ff4545;
+    font-size: 1.6rem;
+    margin-top: -2.2rem;
+}
+
 @include breakpoint(laptop) {
     .flex {
         display: flex;
@@ -104,5 +112,6 @@ code {
         text-align: left;
     }
 }
+
 
 

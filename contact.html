@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>PayApi</title>
+  </head>
+  <body class="second contact-page">
+    <header class="section header" id="header">
+      <div class="container">
+        <nav class="header__nav">
+          <a href="./index.html">
+            <img
+              src="./images/Logo/blueLogo.png"
+              alt="PayApi Logo"
+              class="logo"
+            />
+          </a>
+          <ul class="header__nav-menu">
+            <i class="bx bx-x hidden" id="menu-close"></i>
+            <div class="divider hidden"></div>
+            <li class="nav--item">
+              <a href="./pricing.html" class="nav--link">Pricing</a>
+            </li>
+            <li class="nav--item">
+              <a href="about.html" class="nav--link">About</a>
+            </li>
+            <li class="nav--item">
+              <a href="contact.html" class="nav--link">Contact</a>
+            </li>
+            <a href="#" class="nav--button">Schedule a Demo</a>
+          </ul>
+          <div class="toggle hidden">
+            <i class="bx bx-menu" id="menu-open"></i>
+          </div>
+        </nav>
+
+        <!-- nav ends here -->
+
+        <main class="">
+          <h1 class="pricing-title h2-small main-title-contact">Submit a help request and 
+            we’ll get in touch shortly.
+          </h1>
+
+          <div class="contact-page-wrapper">
+              <div class="form">
+                  <form action="" id="form">
+                      <input class="opacity-selector" type="text" name="name" id="name" placeholder="Name">
+                      <input class="opacity-selector" type="email" name="email" id="the-email" placeholder="Email Address">
+                      <p class="error-message" id="email-error"></p>
+                      <input class="opacity-selector" type="text" name="company-name" id="name" placeholder="Company Name">
+                      <textarea class="opacity-selector" name="message" id="message" cols="10" rows="5" placeholder="Message"></textarea>
+                      <div class="flex">
+                        <label class="check-container">
+                          <input type="checkbox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label for="checkbox" class="info second-paragraph">Stay up-to-date with company announcements and updates to our API</label>
+                      </div>
+                      <button class="dark-button-style" type="submit">Submit</button>
+                  </form>
+              </div>
+
+              <!-- ----- -->
+
+              <div class="blue-companies-icons">
+                  <h2 class="title">Join the thousands of innovators that are already building with us</h2>
+                  <div class="company-logos">
+                    <img src="./images/companiesSVG/tesla-blue.svg" alt="tesla logo" />
+                    <img src="./images/companiesSVG/microsoft-blue.svg" alt="microsoft logo" />
+                    <img src="./images/companiesSVG/hp-blue.svg" alt="hp logo" />
+                    <img src="./images/companiesSVG/orcale-blue.svg" alt="orcale logo" />
+                    <img src="./images/companiesSVG/Google-blue.svg" alt="google logo" />
+                    <img src="./images/companiesSVG/nvidia-blue.svg" alt="nvidia logo" />
+                  </div>
+              </div>
+          </div>
+
+        </main>
+    </div>
+</header>
+
+<!-- ---------------------- --> 
+
+<section class="section read-email">
+    <div class="container">
+      <div class="header__bottom flex">
+        <h2 class="header__bottom-title h2-small">
+            Ready to start?
+        </h2>
+        <div class="fix-button">
+          <form class="header__bottom-form" action="" method="post">
+            <input type="email" placeholder="Enter email address" />
+            <button>Schedule a Demo</button>
+          </form>
+        </div>
+     </div>
+    </div>
+</section>
+  
+  <!-- ------- footer ------- -->
+  
+<footer class="footer section">
+    <div class="container">
+        <nav class="nav">
+            <a href="#home">
+                <img
+                src="./images/Logo/darkLogo.png"
+                alt="PayApi Logo"
+                class="logo"
+                />
+            </a>
+            <ul class="menu">
+                <li class="nav--item">
+                <a href="#pricing" class="nav--link">Pricing</a>
+                </li>
+                <li class="nav--item">
+                <a href="#about" class="nav--link">About</a>
+                </li>
+                <li class="nav--item">
+                <a href="#contact" class="nav--link">Contact</a>
+                </li>
+            </ul>
+            </nav>
+        <div class="social-icons">
+            <a href="http://facebook.com" target="_blank">
+                <i class='bx bxl-facebook-square'></i>
+            </a>
+            <a href="https://twitter.com/?lang=en" target="_blank">
+                <i class='bx bxl-twitter'></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+                <i class='bx bxl-linkedin-square' ></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="index.js"></script>
+<script src="form.js"></script>
+</body>
+</html>
