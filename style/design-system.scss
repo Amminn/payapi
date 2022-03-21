@@ -68,8 +68,9 @@ code {
 }
 
 .dark-button-style {
-    display: block;
-    width: 130px;
+    /* changed because edge kept taking the whole space */
+    display: inline-block;
+    width: fit-content;
     font-size: 1.5rem;
     color: $primary-Water-White;
     background-color: transparent;
@@ -100,6 +101,11 @@ code {
     color: #ff4545;
     font-size: 1.6rem;
     margin-top: -2.2rem;
+}
+
+.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
 }
 
 @include breakpoint(laptop) {

@@ -70,8 +70,9 @@ code {
 }
 
 .dark-button-style {
-  display: block;
-  width: 130px;
+  /* changed because edge kept taking the whole space */
+  display: inline-block;
+  width: fit-content;
   font-size: 1.5rem;
   color: #FBFCFE;
   background-color: transparent;
@@ -101,6 +102,11 @@ code {
   color: #ff4545;
   font-size: 1.6rem;
   margin-top: -2.2rem;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 @media (min-width: 1300px) {
@@ -310,7 +316,8 @@ code {
     margin-bottom: 2rem;
   }
   .header .header__bottom form {
-    margin-inline: initial;
+    margin-left: initial;
+    margin-right: initial;
   }
   .header .header__bottom .header__bottom-question {
     text-align: left;
@@ -350,7 +357,8 @@ header .phone-image {
     line-height: 56px;
     letter-spacing: -0.369231px;
     max-width: 23ch;
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   .h2-small.lg {
     font-size: 4.8rem;
@@ -389,6 +397,7 @@ header .phone-image {
 }
 .header__bottom button {
   width: 100%;
+  height: 100%;
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
@@ -422,7 +431,8 @@ header .phone-image {
     box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
     border-radius: 24px;
     margin-bottom: 1.6rem;
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
   }
   .header__bottom form input {
@@ -433,7 +443,7 @@ header .phone-image {
     box-shadow: initial;
   }
   .header__bottom form button {
-    width: 174px;
+    width: 175px;
     position: absolute;
     right: 0;
     margin: 0;
@@ -497,14 +507,16 @@ header .phone-image {
   .about .company-logos {
     width: 80%;
     gap: 2rem;
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   .about .company-logos img {
     transform: scale(1);
   }
   .about .about__text {
     max-width: 475px;
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   .about .about__text .about__text-paragraph {
     margin-bottom: 3.2rem;
@@ -595,6 +607,9 @@ header .phone-image {
   border-radius: 0 0 8px 8px;
   padding: 0rem 2rem;
 }
+.easy-code .coding .code-area pre {
+  position: relative;
+}
 .easy-code .coding .code-area pre code {
   position: absolute;
   left: 0;
@@ -619,7 +634,8 @@ header .phone-image {
 }
 .easy-code .easy-code__bottom {
   max-width: 573px;
-  margin-inline: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 .easy-code .easy-code__bottom .easy-code__bottom-title {
   margin-bottom: 2.4rem;
@@ -658,7 +674,8 @@ header .phone-image {
 }
 .ui-ux .ui-ux__text {
   max-width: 573px;
-  margin-inline: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 .ui-ux .ui-ux__text .ui-ux__text-title {
   margin-bottom: 2.4rem;
@@ -731,7 +748,8 @@ header .phone-image {
   }
   .read-email .fix-button {
     width: 500px;
-    margin-inline: auto;
+    margin-right: auto;
+    margin-left: auto;
   }
   .read-email .header__bottom form input {
     margin: 0;
@@ -739,11 +757,11 @@ header .phone-image {
 }
 @media (min-width: 1300px) {
   .read-email .fix-button {
-    margin-inline: 0;
+    margin-right: 0;
     margin-left: auto;
   }
   .read-email .header__bottom form {
-    margin-inline: 0;
+    margin-right: 0;
     margin-left: auto;
   }
 }
@@ -855,6 +873,47 @@ header .phone-image {
   /* about */
   /* ---contact page--- */
 }
+.second header::before {
+  top: 0%;
+  left: 40%;
+  background: url(../images/background-elements/full.png) no-repeat center/cover;
+  background-position: 10% -558px;
+  background-size: 738px;
+}
+@media (min-width: 768px) {
+  .second header::before {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .second header .container {
+    position: relative;
+  }
+  .second header .container::before {
+    content: "";
+    position: absolute;
+    height: 840px;
+    width: 100%;
+    top: -586px;
+    left: 60%;
+    background: url(../images/background-elements/full.png) no-repeat center/cover;
+    background-size: 742px;
+    z-index: -1;
+  }
+}
+@media (min-width: 768px) and (min-width: 1300px) {
+  .second header .container::before {
+    content: "";
+    position: absolute;
+    height: 840px;
+    width: 100%;
+    top: -586px;
+    left: 40%;
+    background: url(../images/background-elements/full.png) no-repeat center/cover;
+    background-size: 742px;
+    z-index: -1;
+  }
+}
 .second header {
   margin-bottom: 0;
 }
@@ -907,7 +966,8 @@ header .phone-image {
 }
 .second .dark-button-style {
   width: fit-content;
-  margin-inline: auto;
+  margin-right: auto;
+  margin-left: auto;
   color: #36536B;
   border-color: #36536B;
 }
@@ -936,7 +996,8 @@ header .phone-image {
 }
 @media (min-width: 768px) and (min-width: 1300px) {
   .second .dark-button-style {
-    margin-inline: 0;
+    margin-right: 0;
+    margin-left: 0;
   }
   .second .planes ul {
     margin-left: 3rem;
@@ -1037,7 +1098,8 @@ header .phone-image {
 @media (min-width: 1300px) {
   .second .full-image img {
     min-height: 500px;
-    margin-inline: auto;
+    margin-right: auto;
+    margin-left: auto;
   }
   .second .main-title-about {
     margin-top: 3.5rem;
@@ -1083,8 +1145,11 @@ header .phone-image {
   cursor: pointer;
   opacity: 0.5;
 }
-.second .form form input:hover, .second .form form input:focus, .second .form form input:active, .second .form form input:visited, .second .form form textarea:hover, .second .form form textarea:focus, .second .form form textarea:active, .second .form form textarea:visited {
+.second .form form input:hover, .second .form form input:focus, .second .form form input:active, .second .form form textarea:hover, .second .form form textarea:focus, .second .form form textarea:active {
   opacity: 1;
+}
+.second .form form textarea {
+  resize: none;
 }
 .second .form form .check-container {
   display: block;
@@ -1177,10 +1242,12 @@ header .phone-image {
   }
   .second .form {
     max-width: 445px;
-    margin-inline: auto;
+    margin-right: auto;
+    margin-left: auto;
   }
   .second .blue-companies-icons .title {
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 445px;
     margin-bottom: 4rem;
   }
@@ -1188,7 +1255,8 @@ header .phone-image {
 @media (min-width: 1300px) {
   .second .main-title-contact {
     max-width: 26ch;
-    margin-inline: initial;
+    margin-left: initial;
+    margin-right: initial;
   }
   .second .contact-page-wrapper {
     display: flex;
@@ -1196,25 +1264,27 @@ header .phone-image {
     justify-content: space-between;
   }
   .second .contact-page-wrapper .form {
-    margin-inline: initial;
+    margin-left: initial;
+    margin-right: initial;
   }
   .second .contact-page-wrapper .form form {
     margin-bottom: 0;
   }
   .second .contact-page-wrapper .form form .check-container {
-    padding-left: 0px;
     margin-bottom: 12px;
     margin-top: 0px;
     height: 15px;
   }
   .second .contact-page-wrapper .form .flex {
     margin-top: 0;
+    gap: 0;
   }
   .second .contact-page-wrapper .blue-companies-icons {
     width: 541px;
   }
   .second .contact-page-wrapper .blue-companies-icons .title {
     text-align: left;
-    margin-inline: initial;
+    margin-left: initial;
+    margin-right: initial;
   }
 }
