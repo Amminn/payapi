@@ -16,8 +16,8 @@ body {
     width: 100%;
     max-width: 100%;
     min-height: 100vh;
-    overflow-y: hidden;
-    // if i give fixed width the the body the circel won't keep moving around so the point is to fix the width and not let it free 
+    overflow-x: hidden;
+    // if i give fixed width the body the circel won't keep moving around so the point is to fix the width and not let it free 
 }
 
 a {
@@ -69,7 +69,7 @@ code {
 
 .dark-button-style {
     /* changed because edge kept taking the whole space */
-    display: inline-block;
+    display: block;
     width: fit-content;
     font-size: 1.5rem;
     color: $primary-Water-White;

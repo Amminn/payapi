@@ -21,7 +21,7 @@ body {
   width: 100%;
   max-width: 100%;
   min-height: 100vh;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 a {
@@ -71,7 +71,7 @@ code {
 
 .dark-button-style {
   /* changed because edge kept taking the whole space */
-  display: inline-block;
+  display: block;
   width: fit-content;
   font-size: 1.5rem;
   color: #FBFCFE;
@@ -240,6 +240,9 @@ code {
   transition: 0.3s;
 }
 .header__nav-menu a:hover {
+  opacity: 1;
+}
+.header__nav-menu a.active {
   opacity: 1;
 }
 .header__nav-menu .nav--button {
@@ -690,7 +693,7 @@ header .phone-image {
     height: 149%;
     width: 33%;
     top: -112px;
-    left: 74%;
+    left: 80%;
     background: url(../images/background-elements/Bitmap-right.png) no-repeat center/cover;
     background-size: 368px;
     z-index: -1;
@@ -805,6 +808,12 @@ header .phone-image {
   line-height: 18px;
   padding: 2rem 0;
 }
+.footer li a:hover {
+  opacity: 1;
+}
+.footer li a.active {
+  opacity: 1;
+}
 .footer .social-icons {
   margin: 0 auto;
   display: flex;
@@ -814,6 +823,10 @@ header .phone-image {
 .footer .social-icons i {
   font-size: 2.4rem;
   color: #FBFCFE;
+  transition: 0.3s ease;
+}
+.footer .social-icons i:hover {
+  color: #BA4270;
 }
 @media (min-width: 768px) {
   .footer {
@@ -833,10 +846,10 @@ header .phone-image {
     height: 100%;
     width: 100%;
     top: 0%;
-    right: -52%;
-    background: url("../images/background-elements/Bitmap-bottom.png") no-repeat center/cover;
+    right: -57%;
+    background: url(../images/background-elements/full.png) no-repeat center/cover;
+    background-position-y: -173px;
     background-size: 780px;
-    /* giving fixed size to the circel keep it on its position perfectly important also when you position it don't give is percentage value you have to give it fixed value like 700px*/
     z-index: -1;
   }
   .footer .container {
@@ -1096,8 +1109,27 @@ header .phone-image {
   }
 }
 @media (min-width: 1300px) {
-  .second .full-image img {
+  .second .full-image .img {
+    width: 100%;
     min-height: 500px;
+    max-height: 500px;
+    position: relative;
+  }
+  .second .full-image .img::after {
+    content: "";
+    position: absolute;
+    background: url(../images/background-elements/full.png) no-repeat;
+    background-size: 655px;
+    height: 130%;
+    width: 100%;
+    top: -14%;
+    left: -405px;
+    z-index: -1;
+  }
+  .second .full-image img {
+    width: 100%;
+    min-height: 500px;
+    max-height: 500px;
     margin-right: auto;
     margin-left: auto;
   }

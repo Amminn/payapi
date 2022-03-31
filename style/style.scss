@@ -141,6 +141,10 @@
                 &:hover {
                     opacity: 1;
                 }
+
+                &.active {
+                    opacity: 1;
+                }
             }
 
             .nav--button {
@@ -671,7 +675,7 @@ header .phone-image {
                 height: 149%;
                 width: 33%;
                 top: -112px;
-                left: 74%;
+                left: 80%;
                 background: url(../images/background-elements/Bitmap-right.png) no-repeat center/cover;
                 background-size: 368px;
                 z-index: -1;
@@ -807,7 +811,16 @@ header .phone-image {
             font-size: 1.8rem;
             line-height: 18px;
             padding: 2rem 0;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &.active {
+                opacity: 1;
+            }
         }
+
     }
 
     .social-icons {
@@ -815,10 +828,15 @@ header .phone-image {
         display: flex;
         width: 140px;
         justify-content: space-between;
-
+        
         i {
             font-size: 2.4rem;
             color: $primary-Water-White;
+            transition: 0.3s ease;
+
+            &:hover {
+                color: $primary-Dark-Pink;
+            }
         }
     }
 
@@ -841,11 +859,11 @@ header .phone-image {
                     height: 100%;
                     width: 100%;
                     top: 0%;
-                    right: -52%;
-                    background: url('../images/background-elements/Bitmap-bottom.png') no-repeat center/cover;
-                    // background-position: 50% 185px;
-                    background-size: 780px; /* giving fixed size to the circel keep it on its position perfectly important also when you position it don't give is percentage value you have to give it fixed value like 700px*/
-                    z-index: -1; 
+                    right: -57%;
+                    background: url(../images/background-elements/full.png) no-repeat center/cover;
+                    background-position-y: -173px;
+                    background-size: 780px;
+                    z-index: -1;
                 }
             }
  
@@ -1187,10 +1205,36 @@ header .phone-image {
     }
 
     @include breakpoint(laptop) {
-        .full-image img {
-            min-height: 500px;
-            margin-right: auto; 
-            margin-left: auto; 
+
+        .full-image {
+
+            .img {
+                // opacity: 0.2;
+                width: 100%;
+                min-height: 500px;
+                max-height: 500px;
+                position: relative;
+            }
+            
+            .img::after {
+                content: "";
+                position: absolute;
+                background: url(../images/background-elements/full.png) no-repeat;
+                background-size: 655px;
+                height: 130%;
+                width: 100%;
+                top: -14%;
+                left: -405px;
+                z-index: -1;
+            }
+
+            img {
+                width: 100%;
+                min-height: 500px;
+                max-height: 500px;
+                margin-right: auto; 
+                margin-left: auto; 
+            }
         }
 
         .main-title-about {
