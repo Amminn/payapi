@@ -968,9 +968,11 @@ header .phone-image {
   display: inline-block;
   color: #FBFCFE;
   opacity: 0.7;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 18px;
   padding: 2rem 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .footer li a:hover {
