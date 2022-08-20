@@ -72,7 +72,7 @@ code {
 .dark-button-style {
   /* changed because edge kept taking the whole space */
   display: block;
-  width: fit-content;
+  width: fit-content !important;
   font-size: 1.5rem;
   color: #FBFCFE;
   background-color: transparent;

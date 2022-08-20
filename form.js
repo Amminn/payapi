@@ -26,7 +26,6 @@ form.addEventListener('input', () => {
         }
     })
 
-
     if (!email.value) {
         emailError.textContent = `This Field Cannot be Empty`
         email.style.borderColor = `#ff4545`
